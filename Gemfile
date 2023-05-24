@@ -171,3 +171,6 @@ gem 'lockbox'
 gem "jwt"
 
 gem 'erb_lint', require: false
+
+gem 'singleton-client'
+gem 'http_accept_language', '~> 2.1.1'

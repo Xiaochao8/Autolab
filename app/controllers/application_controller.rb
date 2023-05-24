@@ -19,6 +19,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_for_action
   before_action :update_persistent_announcements
   before_action :set_breadcrumbs
+  around_action :switch_locale
 
   rescue_from ActionView::MissingTemplate do |_exception|
     redirect_to("/home/error_404")
@@ -384,5 +385,10 @@ private
       format.json { head :internal_server_error }
       format.js { head :internal_server_error }
     end
+  end
+
+  def switch_locale(&action)
+    locale = http_accept_language.user_preferred_languages[0]
+    Sgtn.with_locale(locale, &action)
   end
 end

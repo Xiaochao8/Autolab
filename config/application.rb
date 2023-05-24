@@ -1,6 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
+require 'singleton-client'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -139,5 +140,9 @@ module Autolab3
       ENV.delete('SECRET_KEY_BASE')
     end
 
+    Sgtn.product_name = 'Autolab'
+    Sgtn.version = '1.0.0'
+    Sgtn.vip_server = 'http://localhost:8091'
+    Sgtn.source_bundle = './config/sources'
   end
 end
