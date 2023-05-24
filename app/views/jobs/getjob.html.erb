@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag "getjob" %>
 <% end %>
 <p>
-<%= link_to "Return to Jobs", {:action=>"index"} %>
+<%= link_to Sgtn.t('jobs.Return.to.Jobs', 'views'), {:action=>"index"} %>
 </p>
 <h3>Job <%= @job[:id] %> Summary</h3>
 <div class="jobs-table-div">

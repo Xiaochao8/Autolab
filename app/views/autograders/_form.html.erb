@@ -27,7 +27,7 @@
 
   <%= f.text_field :autograde_image, display_name: "VM Image" %>
   <p class="help-block">
-    VM image for autograding (e.g., "<kbd>rhel.img</kbd>"). <%= link_to "Click here", tango_status_course_jobs_path %> to view the list of VM images and pools currently being used.
+    VM image for autograding (e.g., "<kbd>rhel.img</kbd>"). <%= link_to Sgtn.t('autograders.Click.here', 'views'), tango_status_course_jobs_path %> to view the list of VM images and pools currently being used.
   </p>
   <%= f.text_field :autograde_timeout, display_name: "Timeout",
     help_text: "Timeout for autograding jobs (secs)" %>
@@ -42,6 +42,6 @@
 
   <%= f.submit "Save Settings" %>
   
-  <%= link_to "Delete Autograder", [@course, @assessment, :autograder], method: :delete, class: "btn danger",
-              data: {confirm: "Are you sure you want to delete the Autograder for this assesssment?"} %>
+  <%= link_to Sgtn.t('autograders.Delete.Autograder', 'views'), [@course, @assessment, :autograder], method: :delete, class: "btn danger",
+              data: {confirm: Sgtn.t('autograders.Are.you.sure.you.want.to.delete.the.Autograder.for.this.assesssment', 'views')} %>
 <% end %>

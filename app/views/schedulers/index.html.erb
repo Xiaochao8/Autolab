@@ -2,7 +2,7 @@
 <i>It is currently <%= Time.now() %></i>
 
 <p>
-<%= link_to 'Create New Scheduler', new_course_scheduler_path(@course) %>
+<%= link_to Sgtn.t('schedulers.Create.New.Scheduler', 'views'), new_course_scheduler_path(@course) %>
 </p>
 <table class="prettyBorder" >
   <tr>
@@ -18,10 +18,10 @@
     <td><%=h scheduler.action %></td>
     <td><%=h scheduler.next %></td>
     <td><%=h scheduler.interval %></td>
-    <td><%= link_to 'Visual Run', {:action=>"run", :scheduler_id=>scheduler.id}, data: { method: "post" } %></td>
-    <td><%= link_to 'Show', {:action=>"show",:id=>scheduler.id} %>
-    <%= link_to 'Edit', edit_course_scheduler_path(@course, scheduler) %>
-    <%= link_to 'Destroy', course_scheduler_path(@course, scheduler), method: "delete", data: {confirm: 'Are you sure?'} %></td>
+    <td><%= link_to Sgtn.t('schedulers.Visual.Run', 'views'), {:action=>"run", :scheduler_id=>scheduler.id}, data: { method: "post" } %></td>
+    <td><%= link_to Sgtn.t('schedulers.Show', 'views'), {:action=>"show",:id=>scheduler.id} %>
+    <%= link_to Sgtn.t('schedulers.Edit', 'views'), edit_course_scheduler_path(@course, scheduler) %>
+    <%= link_to Sgtn.t('schedulers.Destroy', 'views'), course_scheduler_path(@course, scheduler), method: "delete", data: {confirm: Sgtn.t('schedulers.Are.you.sure', 'views')} %></td>
   </tr>
 <% end %>
 </table>

@@ -46,7 +46,7 @@
         <% unless problem.optional then
           dontTotal = true
         end %>
-        <%= link_to '<i class="tiny material-icons">access_time</i>'.html_safe, { action: :viewFeedback,
+        <%= link_to "<i class='tiny material-icons'>#{Sgtn.t('assessments.access_time', 'views')}</i>".html_safe, { action: :viewFeedback,
             submission_id: submission.id,
             feedback: problem.id} %>
       <% end %>
@@ -82,10 +82,10 @@
 
     <td class="smallText">
       <% if @assessment.has_autograder? and submission.version > 0 then %>
-        <%= link_to '(Regrade)', [:regrade, @course, @assessment, submission_id: submission.id], method: :post %>
+        <%= link_to Sgtn.t('assessments.Regrade', 'views'), [:regrade, @course, @assessment, submission_id: submission.id], method: :post %>
       <% end %>
-      <%= link_to '(Destroy)', [:destroyConfirm, @course, @assessment, submission] %>
-      <%= link_to '(Edit)', [:edit, @course, @assessment, submission] %>
+      <%= link_to Sgtn.t('assessments.Destroy', 'views'), [:destroyConfirm, @course, @assessment, submission] %>
+      <%= link_to Sgtn.t('assessments.Edit.1', 'views'), [:edit, @course, @assessment, submission] %>
     </td>
 
     <% if @cud.instructor? %>

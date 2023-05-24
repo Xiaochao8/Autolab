@@ -103,16 +103,16 @@
     // column spec
     columns = [
       { title: "#", className: "enumerator", data: "id" },
-      { title: "Email & Name", className: "id", data: "name",
+      { title: "<%= Sgtn.t('assessments.Email.Name', 'views') %>", className: "id", data: "name",
         render: function(data, type, full, meta) {
           if (type == "display") return data.name;
           if (type == "filter") return data.name + " " + data.email;
           if (type == "sort") return data.email;
           return data.name;
         } },
-      { title: "Course &#8470;", className: "course_number", data: "course_number" },
-      { title: "Lec/Sec", className: "lec-sec", data: "lec-sec" },
-      { title: "Actions", className: "actions", data: "actions" },
+      { title: "<%= Sgtn.t('assessments.Course.8470', 'views') %>", className: "course_number", data: "course_number" },
+      { title: "<%= Sgtn.t('assessments.Lec.Sec', 'views') %>", className: "lec-sec", data: "lec-sec" },
+      { title: "<%= Sgtn.t('assessments.Actions', 'views') %>", className: "actions", data: "actions" },
       <% @assessment.problems.each_with_index do |p,i| %>
         { title: `<%= p.name %>
             <span class="max_score">(<%= p.max_score || raw("&ndash;") %>)</span>`,
@@ -134,13 +134,13 @@
           } },
       <% end %>
       <% if @cud.instructor? %>
-        { title: "Late\nPenalty", className: "late_penalty", data: "late_penalty" },
+        { title: "<%= Sgtn.t('assessments.Late.nPenalty', 'views') %>", className: "late_penalty", data: "late_penalty" },
         <% if @assessment.version_penalty? %>
-          { title: "Version\nPenalty", className: "version_penalty", data: "version_penalty" },
+          { title: "<%= Sgtn.t('assessments.Version.nPenalty', 'views') %>", className: "version_penalty", data: "version_penalty" },
         <% end %>
-        { title: "Tweak", className: "tweak", data: "tweak" },
+        { title: "<%= Sgtn.t('assessments.Tweak', 'views') %>", className: "tweak", data: "tweak" },
       <% end %>
-      { title: "Total", className: "total", data: "total" }
+      { title: "<%= Sgtn.t('assessments.Total', 'views') %>", className: "total", data: "total" }
     ];
 
     // templates

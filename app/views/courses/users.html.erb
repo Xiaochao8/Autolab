@@ -42,7 +42,7 @@
           <%= f.submit "Save" , {class: "btn-flat"} %>
           <a href="#!" class="modal-close btn-flat">Cancel</a>
         </span>
-        <%= link_to raw('<span class="btn-flat">Unlink Course</span>'), {action: "unlink_course"}, data: { confirm: "Are you sure you want to unlink the course?" }, method: :post %>
+        <%= link_to raw('<span class="btn-flat">Unlink Course</span>'), {action: "unlink_course"}, data: { confirm: Sgtn.t('courses.Are.you.sure.you.want.to.unlink.the.course', 'views') }, method: :post %>
       </div>
     <% end %>
   </div>

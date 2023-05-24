@@ -39,6 +39,6 @@
 <%= f.text_area :gb_message, class: "materialize-textarea",
   help_text: "An optional message that is displayed to students at the top of
   their gradebooks.  It can be used to explain grading criteria.",
-  display_name: "Gradebook Message", placeholder: "Optional" %>
+  display_name: "Gradebook Message", placeholder: Sgtn.t('courses.Optional', 'views') %>
 
 <%= f.file_field :config_file, button_text: "Upload course.rb", help_text: "Config file will be automatically reloaded after saving. Changes to other settings will be lost if an error is encountered." %>

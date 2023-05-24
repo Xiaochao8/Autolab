@@ -7,9 +7,9 @@
   <hr>
 
   <%= f.text_field :banner, size: 80,
-    placeholder: "Optional HTML banner text. Leave blank for default." %>
+    placeholder: Sgtn.t('scoreboards.Optional.HTML.banner.text.Leave.blank.for.default', 'views') %>
 
-  <%= f.text_area :colspec, class: "materialize-textarea", placeholder: "Optional JSON string that describes your customized scoreboard columns. Leave blank for default.", display_name: "Column Specification",
+  <%= f.text_area :colspec, class: "materialize-textarea", placeholder: Sgtn.t('scoreboards.Optional.JSON.string.that.describes.your.customized.scoreboard.columns.Leave.blank.for.default', 'views'), display_name: "Column Specification",
     rows: 5, cols: 80 %></td>
   <p class="help-block">
   <b>Example: </b>A scoreboard with two columns "Score" and "Ops" with "Ops" sorted in ascending order
@@ -24,8 +24,8 @@
   <p>
 
   <%= f.submit "Save", {class: "btn primary"} %>
-  <%= link_to "Delete", [@course, @assessment, :scoreboard], method: :delete, class: "btn danger",
-              data: {confirm: "Are you sure you want to delete the Scoreboard for this assessment?"} %>
+  <%= link_to Sgtn.t('scoreboards.Delete', 'views'), [@course, @assessment, :scoreboard], method: :delete, class: "btn danger",
+              data: {confirm: Sgtn.t('scoreboards.Are.you.sure.you.want.to.delete.the.Scoreboard.for.this.assessment', 'views')} %>
 
 <% end %>
 

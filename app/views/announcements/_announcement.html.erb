@@ -6,7 +6,7 @@
       <span class="btn small">Edit</span>
     <% end %>
     <%= link_to [@course, announcement], method: :delete, 
-      data: {confirm: "Are you sure you want to delete this announcement?"} do %>
+      data: {confirm: Sgtn.t('announcements.Are.you.sure.you.want.to.delete.this.announcement', 'views')} do %>
       <span class="btn small">Delete</span>
     <% end %>
   <% end %>

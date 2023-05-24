@@ -1,7 +1,7 @@
 <h2>Create Submission for <%= link_to @assessment.display_name, [@course, @assessment] %> </h2>
 
 <p>
-<%= link_to "Manage Submissions", [@course, @assessment, :submissions] %>
+<%= link_to Sgtn.t('submissions.Manage.Submissions', 'views'), [@course, @assessment, :submissions] %>
 </p>
 
 <%= form_for @submission, as: :submission,
@@ -46,13 +46,13 @@
   <th>File:</th><td><%= f.file_field :file %></td>
 </tr>
 <tr>
-  <th>Notes:</th><td><%= f.text_area :notes, class: 'materialize-textarea', placeholder: "Notes on submission"%></td>
+  <th>Notes:</th><td><%= f.text_area :notes, class: 'materialize-textarea', placeholder: Sgtn.t('submissions.Notes.on.submission', 'views')%></td>
 </tr>
 <tr>
   <th>Tweak:</th>
   <td>
   <%= f.fields_for :tweak, @submission.tweak do |t| %>
-    <%= t.text_field :value, placeholder: "Number of points or percentage" %>
+    <%= t.text_field :value, placeholder: Sgtn.t('submissions.Number.of.points.or.percentage', 'views') %>
     <%= t.select :kind, options_for_select({"points" => "points", "%" => "percent"}, :selected => (@submission.tweak ? @submission.tweak.kind : "points")) %>
   <% end %>
   </td>

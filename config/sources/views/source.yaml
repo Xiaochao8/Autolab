@@ -1,0 +1,295 @@
+---
+source:
+  admins.Are.you.sure: Are you sure?
+  admins.Send.Email: Send Email
+  announcements.Are.you.sure.you.want.to.delete.this.announcement: Are you sure you want to delete this announcement?
+  assessments.Actions: Actions
+  assessments.Add.Attachment: Add Attachment
+  assessments.Add.Problem: Add Problem
+  assessments.Are.you.sure.you.want.to.delete.the.Autograder.for.this.assessment: Are you sure you want to delete the Autograder for this assessment?
+  assessments.Are.you.sure.you.want.to.delete.the.Scoreboard.for.this.assessment: Are you sure you want to delete the Scoreboard for this assessment?
+  assessments.Are.you.sure.you.want.to.release.all.grades: Are you sure you want to release all grades?
+  assessments.Are.you.sure.you.want.to.release.section.grades: Are you sure you want to release section grades?
+  assessments.Are.you.sure.you.want.to.reload.the.config.file: Are you sure you want to reload the config file?
+  assessments.Are.you.sure.you.want.to.submit.late: Are you sure you want to submit late?
+  assessments.Are.you.sure.you.want.to.withdraw.all.grades: Are you sure you want to withdraw all grades?
+  assessments.Assessment.Builder: Assessment Builder
+  assessments.Autograder.settings: Autograder settings
+  assessments.Bulk.export.grades: Bulk export grades
+  assessments.Bulk.import.grades: Bulk import grades
+  assessments.Check.your.group.settings: Check your group settings.
+  assessments.Configure.the.appearance.of.the.scoreboard: Configure the appearance of the scoreboard
+  assessments.Course.8470: Course &#8470;
+  assessments.Create.view.export.and.re.autograde.submissions: Create, view, export, and re-autograde submissions
+  assessments.Default.handin: 'Default: handin'
+  assessments.Delete: Delete
+  assessments.Delete.Assessment: Delete Assessment
+  assessments.Deleting.will.delete.all.associated.assessment.data.and.cannot.be.undone.Are.you.sure.you.want: " Deleting will delete all associated assessment data and cannot be undone. Are you sure you want to delete this assessment?"
+  assessments.Deleting.will.delete.all.associated.problem.data.such.as.scores.and.annotations.and.cannot: Deleting will delete all associated problem data (such as scores and annotations) and cannot be undone. Are you sure you want to delete this problem?
+  assessments.Destroy: "(Destroy)"
+  assessments.Destroy.1: Destroy
+  assessments.Download.Submission: Download Submission
+  assessments.Download.as.text.plain: Download as text/plain
+  assessments.Download.handout: Download handout
+  assessments.Download.handout.materials.and.starter.code: Download handout materials and starter code
+  assessments.Download.section.cud_section.submissions: Download section %{cud_section} submissions
+  assessments.E.g.malloclab.zip.or.http.school.edu.class.malloclab.zip: E.g.   malloclab.zip   or   http://school.edu/class/malloclab.zip
+  assessments.E.g.mm.c: E.g. mm.c
+  assessments.E.g.writeup.pdf.or.http.school.edu.class.writeup.pdf: E.g.   writeup.pdf   or   http://school.edu/class/writeup.pdf
+  assessments.Edit: Edit
+  assessments.Edit.1: "(Edit)"
+  assessments.Edit.assessment: Edit assessment
+  assessments.Email.Name: Email & Name
+  assessments.Export.assessment: Export assessment
+  assessments.Export.grades.with.sub.scores.nfor.all.students.to.a.CSV.file: Export grades (with sub-scores) \nfor all students to a CSV file
+  assessments.Export.persistent.properties.that.will.be.imported.when.you.install.this.assessment.in.a.future.term: Export persistent properties that will be imported when you install this assessment in a future term
+  assessments.Give.extensions.to.students: Give extensions to students
+  assessments.Global.Annotation: Global Annotation
+  assessments.Go: Go!
+  assessments.Go.back.to.assessment_display_name: Go back to %{assessment_display_name}
+  assessments.Go.to.course.website: Go to course website
+  assessments.Grade.all.submissions: Grade all submissions
+  assessments.Grade.section.cud_section.submissions: Grade section %{cud_section} submissions
+  assessments.Grade.submissions: Grade submissions
+  assessments.Group.options: Group options
+  assessments.Group.settings: Group settings
+  assessments.Hide.all.scores.for.this.assessment.from.students: Hide all scores for this assessment from students
+  assessments.Homework0: Homework0
+  assessments.Install.Assessment: Install Assessment
+  assessments.Justify: Justify
+  assessments.Late.nPenalty: Late\nPenalty
+  assessments.Leave.blank.for.no.grace.day.limit: Leave blank for no grace day limit
+  assessments.Leave.blank.to.use.course.default: Leave blank to use course default.
+  assessments.Lec.Sec: Lec/Sec
+  assessments.Make.all.scores.for.this.assessment.visible.to.students: Make all scores for this assessment visible to students
+  assessments.Make.all.scores.visible.to.the.students.in.your.section.This.will.work.only.if.your.instructor.has: Make all scores visible to the students in your section. This will work only if your instructor has assigned you to a lecture and section in your Autolab account.
+  assessments.Malloc.Lab: Malloc Lab
+  assessments.Manage.extensions: Manage extensions
+  assessments.Manage.group.settings: Manage group settings
+  assessments.Manage.submissions: Manage submissions
+  assessments.Metrics.for.Identifying.Students.in.Need: Metrics for Identifying Students in Need
+  assessments.Modify.autograding.properties.such.as.the.VM.image.and.the.timeout.value: Modify autograding properties such as the VM image and the timeout value
+  assessments.New.Category: New Category
+  assessments.No: 'No'
+  assessments.Optional: "(Optional)"
+  assessments.Optional.Description.of.assessment: "(Optional) Description of assessment"
+  assessments.Regrade: "(Regrade)"
+  assessments.Regrade.1: Regrade
+  assessments.Release.all.grades: Release all grades
+  assessments.Release.section.grades: Release section grades
+  assessments.Reload.config.file: Reload config file
+  assessments.Reload.the.assessment.config.file.provided.for.backward.compatibility.with.legacy.assessments: Reload the assessment config file (provided for backward compatibility with legacy assessments)
+  assessments.Scoreboard.settings: Scoreboard settings
+  assessments.Submission.History: Submission History
+  assessments.Total: Total
+  assessments.Tweak: Tweak
+  assessments.Upload.scores.or.feedback.for.multiple.students.from.a.CSV.file: Upload scores or feedback for multiple students from a CSV file
+  assessments.Version.nPenalty: Version\nPenalty
+  assessments.View.Gradesheet: View Gradesheet
+  assessments.View.Source: View Source
+  assessments.View.and.enter.grades.for.all.sections: View and enter grades for all sections
+  assessments.View.and.enter.grades.for.your.section.Make.sure.your.instructor.has.assigned.you.to.a.section: View and enter grades for your section. Make sure your instructor has assigned you to a section in your Autolab account
+  assessments.View.and.enter.grades.on.the.gradesheet: View and enter grades on the gradesheet
+  assessments.View.and.modify.the.properties.for.this.assessment.including.its.problems: View and modify the properties for this assessment, including its problems
+  assessments.View.detailed.stats.for.this.assessment: View detailed stats for this assessment
+  assessments.View.handin.history: View handin history
+  assessments.View.scoreboard: View scoreboard
+  assessments.View.statistics: View statistics
+  assessments.View.the.assessment.scoreboard: View the assessment scoreboard
+  assessments.View.the.assessment.writeup: View the assessment writeup
+  assessments.View.writeup: View writeup
+  assessments.View.your.gradebook: View your gradebook
+  assessments.View.your.submissions.scores.and.feedback.from.the.course.staff: View your submissions, scores, and feedback from the course staff
+  assessments.Withdraw.all.grades: Withdraw all grades
+  assessments.access_time: access_time
+  assessments.add: add
+  assessments.delete: delete
+  assessments.here: here
+  assessments.mode_edit: mode_edit
+  assessments.reload: reload
+  assessments.web.Course.Website: web Course Website
+  autograders.Are.you.sure.you.want.to.delete.the.Autograder.for.this.assesssment: Are you sure you want to delete the Autograder for this assesssment?
+  autograders.Click.here: Click here
+  autograders.Delete.Autograder: Delete Autograder
+  course_user_data.Act.as.user: Act as user
+  course_user_data.Doe: Doe
+  course_user_data.Edit.this.information: Edit this information
+  course_user_data.John: John
+  course_user_data.droh: droh
+  course_user_data.johndoe.example.com: johndoe@example.com
+  courses.Act.as.user: Act as user
+  courses.Are.you.sure: Are you sure?
+  courses.Are.you.sure.to.destroy.course_full_name: Are you sure to destroy %{course_full_name}?
+  courses.Are.you.sure.you.want.to.release.all.grades: Are you sure you want to release all grades?
+  courses.Are.you.sure.you.want.to.reload.the.course.config.file: Are you sure you want to reload the course config file?
+  courses.Are.you.sure.you.want.to.unlink.the.course: Are you sure you want to unlink the course?
+  courses.Course.settings: Course settings
+  courses.Create.a.new.course: Create a new course
+  courses.Create.an.assessment.from.scratch.or.install.one.from.an.existing.directory: Create an assessment from scratch or install one from an existing directory
+  courses.Create.modify.and.delete.user.accounts: Create, modify, and delete user accounts
+  courses.Create.new.course: Create new course
+  courses.Delete.Course: Delete Course
+  courses.Distribute.files.to.your.students: Distribute files to your students
+  courses.Go: Go!
+  courses.Go.to.Course.Page: Go to Course Page
+  courses.Go.to.course.page: Go to course page
+  courses.Grade.your.section: Grade your section
+  courses.If.you.don.t.know.what.this.is.please.read.the.Moss.documentation.before.altering.this.value: If you don't know what this is please read the Moss documentation before altering this value.
+  courses.Include.a.brief.description.of.your.problem.here: Include a brief description of your problem here
+  courses.Install.Assessment: Install Assessment
+  courses.Install.assessment: Install assessment
+  courses.Manage.announcements: Manage announcements
+  courses.Manage.announcements.via.banners.on.either.front.page.or.all.pages.persistent: Manage announcements via banners on either front page or all pages (persistent).
+  courses.Manage.course.attachments: Manage course attachments
+  courses.Manage.course.users: Manage course users
+  courses.Manage.schedulers: Manage schedulers
+  courses.Modify.the.properties.for.this.course: Modify the properties for this course
+  courses.Optional: Optional
+  courses.Release.all.grades: Release all grades
+  courses.Release.all.grades.for.all.assessments: Release all grades for all assessments
+  courses.Reload.course.config.file: Reload course config file
+  courses.Reload.each.time.you.modify.the.course.rb.file: Reload each time you modify the course.rb file
+  courses.Run.Moss.cheat.checker: Run Moss cheat checker
+  courses.Send.Email: Send Email
+  courses.Send.an.email.to.everyone.in.the.class: Send an email to everyone in the class
+  courses.Send.bulk.email: Send bulk email
+  courses.Set.and.update.scheduler.for.log.submissions.Advanced.feature: Set and update scheduler for log submissions. (Advanced feature)
+  courses.Submit.Bug: Submit Bug
+  courses.Temporarily.become.another.user: Temporarily become another user
+  courses.Use.the.Stanford.Moss.server.to.detect.copying: Use the Stanford Moss server to detect copying
+  courses.View.your.gradebook: View your gradebook
+  courses.assignment.Install.Assessment: assignment Install Assessment
+  courses.here: here
+  courses.reload: reload
+  device_flow_activation.Activate: Activate
+  devise.mailer.Change.my.password: Change my password
+  devise.mailer.Confirm.my.account: Confirm my account
+  devise.mailer.Unlock.my.account: Unlock my account
+  devise.registrations.Are.you.sure: Are you sure?
+  devise.registrations.Back: Back
+  devise.registrations.Cancel.my.account: Cancel my account
+  devise.registrations.Must.match.your.password: Must match your password
+  devise.sessions.Developer.Login: Developer Login
+  devise.sessions.Email.Address: Email Address
+  devise.sessions.Password: Password
+  devise.shared.Didn.t.receive.confirmation.instructions: Didn't receive confirmation instructions?
+  devise.shared.Didn.t.receive.unlock.instructions: Didn't receive unlock instructions?
+  devise.shared.Forgot.your.password: Forgot your password?
+  devise.shared.Register: Register
+  devise.shared.Sign.in: Sign in
+  devise.shared.Sign.in.with.provider_to_s_titleize: Sign in with %{provider_to_s_titleize}
+  devise.shared.Sign.in.with.your.CMU.account: Sign in with your CMU account
+  extensions.Are.you.sure.you.want.to.delete.the.extension.for.user: 'Are you sure you want to delete the extension for user '
+  extensions.delete: delete
+  groups.Are.you.sure.you.want.to.disband.this.group: Are you sure you want to disband this group?
+  groups.Are.you.sure.you.want.to.leave.your.group: Are you sure you want to leave your group?
+  groups.Ask.to.Join.Group: Ask to Join Group
+  groups.Cancel.Request: Cancel Request
+  groups.Confirm.Membership: Confirm Membership
+  groups.Create.Group: Create Group
+  groups.Create.New.Group: Create New Group
+  groups.Deny.Membership: Deny Membership
+  groups.Destroy: Destroy
+  groups.Edit: Edit
+  groups.Go: Go!
+  groups.Invite.to.Group: Invite to Group
+  groups.Leave.Group: Leave Group
+  groups.View: View
+  home.Go: Go!
+  home.Reload.Assessment.Config: Reload Assessment Config
+  home.Reload.Course.Config: Reload Course Config
+  jobs.All.VM.Pools: All VM Pools
+  jobs.Click.here: Click here
+  jobs.Return.to.Jobs: Return to Jobs
+  jobs.View.long.list.of.recently.completed.jobs: View long list of recently completed jobs
+  jobs.View.short.list.of.recently.completed.jobs: View short list of recently completed jobs
+  layouts.Account: Account
+  layouts.Bulk.Email.Instructors: Bulk Email Instructors
+  layouts.Clear.Cache: Clear Cache
+  layouts.Course.Profile: Course Profile
+  layouts.Create.New.Course: Create New Course
+  layouts.Create.a.new.course: Create a new course
+  layouts.Github.Integration: Github Integration
+  layouts.LTI.Integration: LTI Integration
+  layouts.Log.out: Log out
+  layouts.Manage.API.Applications: Manage API Applications
+  layouts.Manage.Github.Integration: Manage Github Integration
+  layouts.Manage.Users: Manage Users
+  layouts.Manage.every.Autolab.user: Manage every Autolab user
+  layouts.Manage.registered.API.clients: Manage registered API clients
+  layouts.Perform.course.wise.administrative.actions: Perform course-wise administrative actions
+  layouts.Send.a.bulk.email.to.every.Autolab.instructor: Send a bulk email to every Autolab instructor
+  layouts.View.a.history.of.autograding.jobs: View a history of autograding jobs
+  layouts.View.and.update.LTI.Integration.Configuration: View and update LTI Integration Configuration
+  layouts.View.your.account.info: View your account info
+  layouts.View.your.gradebook: View your gradebook
+  layouts.View.your.user.profile.for.the.current.course: View your user profile for the current course
+  layouts.cud_display_name.Return.to.instructor.view: "(%{cud_display_name}) Return to instructor view"
+  layouts.grading.Gradebook: grading Gradebook
+  problems.Delete.this.Problem: Delete this Problem
+  problems.Deleting.will.delete.all.associated.problem.data.such.as.scores.and.annotations.and.cannot: Deleting will delete all associated problem data (such as scores and annotations) and cannot be undone. Are you sure you want to delete this problem?
+  problems.E.g.problem1: E.g. problem1
+  problems.Optional: "(Optional)"
+  schedulers.Are.you.sure: Are you sure?
+  schedulers.Back: Back
+  schedulers.Create.New.Scheduler: Create New Scheduler
+  schedulers.Destroy: Destroy
+  schedulers.Edit: Edit
+  schedulers.Index: Index
+  schedulers.Show: Show
+  schedulers.Visual.Run: Visual Run
+  schedulers.in.seconds: "(in seconds)"
+  schedulers.scheduler.action: "(scheduler action)"
+  scoreboards.Are.you.sure.you.want.to.delete.the.Scoreboard.for.this.assessment: Are you sure you want to delete the Scoreboard for this assessment?
+  scoreboards.Delete: Delete
+  scoreboards.Optional.HTML.banner.text.Leave.blank.for.default: Optional HTML banner text. Leave blank for default.
+  scoreboards.Optional.JSON.string.that.describes.your.customized.scoreboard.columns.Leave.blank.for.default: Optional JSON string that describes your customized scoreboard columns. Leave blank for default.
+  submissions.Annotations: Annotations
+  submissions.Are.you.sure.you.want.to.do.this.It.will.regrade.the.most.recent.submission.from.each.student.which: Are you sure you want to do this? It will regrade the most recent submission from each student, which might take a while.
+  submissions.Back: Back
+  submissions.Back.to.Manage.Submissions: Back to Manage Submissions
+  submissions.Brief.notes.on.submission.no.more.than.255.characters: Brief notes on submission (no more than 255 characters)
+  submissions.Code: Code
+  submissions.Create.New.Submission: Create New Submission
+  submissions.Create.Submission: Create Submission
+  submissions.Create.a.new.submission.for.a.student.with.an.option.to.submit.a.handin.file.on.their.behalf: Create a new submission for a student, with an option to submit a handin file on their behalf
+  submissions.Create.a.submission.for.this.student.with.the.option.to.handin.a.file.on.their.behalf: Create a submission for this student, with the option to handin a file on their behalf
+  submissions.Create.submissions.for.all.of.the.missing.students: Create submissions for all of the missing students
+  submissions.Destroy: Destroy!
+  submissions.Destroy.this.submission.forever: Destroy this submission forever
+  submissions.Down.all.submissions.from.each.student: Down all submissions from each student
+  submissions.Download.All.Submissions: Download All Submissions
+  submissions.Download.Annotated.Submission: Download Annotated Submission
+  submissions.Download.Final.Submissions: Download Final Submissions
+  submissions.Download.Submission: Download Submission
+  submissions.Download.the.most.recent.submission.from.each.student: Download the most recent submission from each student
+  submissions.Edit.the.grading.properties.of.this.submission: Edit the grading properties of this submission
+  submissions.File.Outline: File Outline
+  submissions.Fill.In.Empty.Submissions: Fill In Empty Submissions
+  submissions.Grades: Grades
+  submissions.Grant.extensions.to.students: Grant extensions to students
+  submissions.List.the.students.who.have.not.submitted.anything.You.ll.be.given.the.option.to.create.new: List the students who have not submitted anything. You'll be given the option to create new submissions for the missing students
+  submissions.Manage.Extensions: Manage Extensions
+  submissions.Manage.Submissions: Manage Submissions
+  submissions.Missing.Submissions: Missing Submissions
+  submissions.Next.student.shortcut: 'Next student (shortcut: →)'
+  submissions.Next.version.containing.this.file.shortcut: 'Next version containing this file (shortcut: ])'
+  submissions.Notes.on.submission: Notes on submission
+  submissions.Number.of.points.or.percentage: Number of points or percentage
+  submissions.Previous.student.shortcut: 'Previous student (shortcut: ←)'
+  submissions.Previous.version.containing.this.file.shortcut: 'Previous version containing this file (shortcut: [)'
+  submissions.Regrade.0: Regrade 0
+  submissions.Regrade.All: Regrade All
+  submissions.Regrade.the.most.recent.submission.from.each.student: Regrade the most recent submission from each student
+  submissions.Rerun.the.autograder.on.this.submission: Rerun the autograder on this submission
+  submissions.Return.to.the.previous.page: Return to the previous page
+  submissions.Symbol.Tree: Symbol Tree
+  submissions.delete: delete
+  submissions.edit: edit
+  users.Are.you.sure: Are you sure!?
+  users.Computer.Science: Computer Science
+  users.Create.user: Create user
+  users.Doe: Doe
+  users.John: John
+  users.School.of.Computer.Science: School of Computer Science
+  users.johndoe.example.com: johndoe@example.com

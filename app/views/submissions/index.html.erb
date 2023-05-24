@@ -26,42 +26,42 @@
 <hr>
 
 <p>
-    <%= link_to "Create New Submission".html_safe, new_course_assessment_submission_path(@course, @assessment),
-        {:title=>"Create a new submission for a student, with an option to submit a handin file on their behalf",
+    <%= link_to Sgtn.t('submissions.Create.New.Submission', 'views').html_safe, new_course_assessment_submission_path(@course, @assessment),
+        {:title=>Sgtn.t('submissions.Create.a.new.submission.for.a.student.with.an.option.to.submit.a.handin.file.on.their.behalf', 'views'),
          :class=>""} %>
          |
-    <%= link_to "Download All Submissions".html_safe,
+    <%= link_to Sgtn.t('submissions.Download.All.Submissions', 'views').html_safe,
         downloadAll_course_assessment_submissions_path(@course, @assessment),
-        {:title=>"Down all submissions from each student",
+        {:title=>Sgtn.t('submissions.Down.all.submissions.from.each.student', 'views'),
          :class=>""} %>
          |
-    <%= link_to "Download Final Submissions".html_safe,
+    <%= link_to Sgtn.t('submissions.Download.Final.Submissions', 'views').html_safe,
         downloadAll_course_assessment_submissions_path(@course, @assessment, final: true),
-        {:title=>"Download the most recent submission from each student",
+        {:title=>Sgtn.t('submissions.Download.the.most.recent.submission.from.each.student', 'views'),
          :class=>""} %>
          |
-    <%= link_to "Missing Submissions".html_safe,
+    <%= link_to Sgtn.t('submissions.Missing.Submissions', 'views').html_safe,
         missing_course_assessment_submissions_path(@course, @assessment),
-        {:title=>"List the students who have not submitted anything. You'll be given the option to create new submissions for the missing students",
+        {:title=>Sgtn.t('submissions.List.the.students.who.have.not.submitted.anything.You.ll.be.given.the.option.to.create.new', 'views'),
          :class=>""} %>
 
 </p>
 <div class="row">
   <% if @autograded then %>
     <div class="col s3">
-    <%= link_to "Regrade All",
+    <%= link_to Sgtn.t('submissions.Regrade.All', 'views'),
         [:regradeAll, @course, @assessment],
         { method: :post,
-         :title=>"Regrade the most recent submission from each student",
-         :confirm=>"Are you sure you want to do this? It will regrade the most recent submission from each student, which might take a while.",
+         :title=>Sgtn.t('submissions.Regrade.the.most.recent.submission.from.each.student', 'views'),
+         :confirm=>Sgtn.t('submissions.Are.you.sure.you.want.to.do.this.It.will.regrade.the.most.recent.submission.from.each.student.which', 'views'),
          :class=>"btn"} %>
     </div>
     <div class="col s3 offset-s6">
 
-    <%= link_to "Regrade 0",
+    <%= link_to Sgtn.t('submissions.Regrade.0', 'views'),
         [:regradeBatch, @course, @assessment],
         { method: :post,
-         :title=>"Regrade the most recent submission from each student",
+         :title=>Sgtn.t('submissions.Regrade.the.most.recent.submission.from.each.student', 'views'),
          :class=>"btn float-right",
          :id => "batch-regrade",
          :style => "display:none;"} %>
@@ -117,16 +117,16 @@
         <% if @autograded and submission.version > 0 then %>
           <%= button_to [:regrade, @course, @assessment, submission_id: submission.id],
                :method => :post,
-               :title=>"Rerun the autograder on this submission",
+               :title=>Sgtn.t('submissions.Rerun.the.autograder.on.this.submission', 'views'),
                :class=>"btn small" do %>
                <i class='material-icons'>autorenew</i>
         <% end %>
         <% end %>
-        <%= link_to "<i class='material-icons'>edit</i>".html_safe, [:edit, @course, @assessment, submission],
-            {:title=>"Edit the grading properties of this submission",
+        <%= link_to "<i class='material-icons'>#{Sgtn.t('submissions.edit', 'views')}</i>".html_safe, [:edit, @course, @assessment, submission],
+            {:title=>Sgtn.t('submissions.Edit.the.grading.properties.of.this.submission', 'views'),
               :class=>"btn small"} %>
-        <%= link_to "<i class='material-icons'>delete</i>".html_safe, destroyConfirm_course_assessment_submission_path(@course, @assessment, submission),
-            {:title=>"Destroy this submission forever",
+        <%= link_to "<i class='material-icons'>#{Sgtn.t('submissions.delete', 'views')}</i>".html_safe, destroyConfirm_course_assessment_submission_path(@course, @assessment, submission),
+            {:title=>Sgtn.t('submissions.Destroy.this.submission.forever', 'views'),
               :class=>"btn small"} %>
       </td>
       <td><%= submission.latest? %></td>

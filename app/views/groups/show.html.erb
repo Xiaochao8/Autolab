@@ -3,8 +3,8 @@
 <% if @aud.group_id == @group.id or @cud.instructor then %>
   <% if (@aud.membership_status & AssessmentUserDatum::MEMBER_CONFIRMED) == 0 then %>
     <p>You have not confirmed your group membership yet.</p>
-    <%= link_to "Confirm Membership", [:join, @course, @assessment, @group], method: :post %> | 
-    <%= link_to "Deny Membership", [:leave, @course, @assessment, @group], method: :post %>
+    <%= link_to Sgtn.t('groups.Confirm.Membership', 'views'), [:join, @course, @assessment, @group], method: :post %> | 
+    <%= link_to Sgtn.t('groups.Deny.Membership', 'views'), [:leave, @course, @assessment, @group], method: :post %>
   <% elsif (@aud.membership_status & AssessmentUserDatum::GROUP_CONFIRMED) == 0 then %>
     <p>Your group has not confirmed your membership yet.</p>
   <% end %>
@@ -22,14 +22,14 @@
       <% if !aud.group_confirmed(AssessmentUserDatum::MEMBER_CONFIRMED) then %>
         <p>This Member has not Confirmed their Membership yet.</p>
         <% if @group.is_member(@aud) or @cud.instructor then %>
-          <p><%= link_to "Cancel Request", [:leave, @course, @assessment, @group, member_id: cud.id], method: :post %></p>
+          <p><%= link_to Sgtn.t('groups.Cancel.Request', 'views'), [:leave, @course, @assessment, @group, member_id: cud.id], method: :post %></p>
         <% end %>
       <% elsif !aud.group_confirmed(AssessmentUserDatum::GROUP_CONFIRMED) then %>
         <p>This Member has not been Confirmed by the Group yet.</p>
         <% if @group.is_member(@aud) or @cud.instructor then %>
           <p>
-            <%= link_to "Confirm Membership", [:add, @course, @assessment, @group, member_id: cud.id], method: :post %> |
-            <%= link_to "Deny Membership", [:leave, @course, @assessment, @group, member_id: cud.id], method: :post %>
+            <%= link_to Sgtn.t('groups.Confirm.Membership', 'views'), [:add, @course, @assessment, @group, member_id: cud.id], method: :post %> |
+            <%= link_to Sgtn.t('groups.Deny.Membership', 'views'), [:leave, @course, @assessment, @group, member_id: cud.id], method: :post %>
           </p>
         <% end %>
       <% end %>
@@ -47,7 +47,7 @@
         <p class="help-block">The email of your desired partner. They will need to confirm their membership.</p>
       </div>
 
-      <%= submit_tag "Invite to Group", class:"btn btn-primary" %>
+      <%= submit_tag Sgtn.t('groups.Invite.to.Group', 'views'), class:"btn btn-primary" %>
     <% end %>
   <% end %>
 <% end %>
@@ -58,7 +58,7 @@
     <% @grouplessCUDs.each do |cud| %>
       <% if cud.id != @cud.id && cud.student? then %>
         <li><b><%= cud.email %></b>
-          (<%= link_to "Invite to Group", [:add, @course, @assessment, @group, member_id: cud.id], method: :post %>)
+          (<%= link_to Sgtn.t('groups.Invite.to.Group', 'views'), [:add, @course, @assessment, @group, member_id: cud.id], method: :post %>)
         </li>
       <% end %>
     <% end %>
@@ -67,7 +67,7 @@
 
 <div style="margin-top: 1em">
   <% if @group.is_member(@aud) then %>
-    <%= link_to "Leave Group", [:leave, @course, @assessment, @group], {method: :post, data: {confirm: "Are you sure you want to leave your group?"}} %> | 
+    <%= link_to Sgtn.t('groups.Leave.Group', 'views'), [:leave, @course, @assessment, @group], {method: :post, data: {confirm: Sgtn.t('groups.Are.you.sure.you.want.to.leave.your.group', 'views')}} %> | 
   <% end %>
   <%= groups_back_link %>
 </div>

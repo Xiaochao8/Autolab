@@ -40,12 +40,12 @@
   fileComponents.push({
       type: "component",
       componentName: "file_tree",
-      title: "File Outline",
+      title: "<%= Sgtn.t('submissions.File.Outline', 'views') %>",
     });
   fileComponents.push({
       type: "component",
       componentName: "code_symbol_tree",
-      title: "Symbol Tree",
+      title: "<%= Sgtn.t('submissions.Symbol.Tree', 'views') %>",
     });
 
   // Check if old localStorage value is the same as the new value, then updates localStorage
@@ -62,7 +62,7 @@
       {
         type: "component",
         componentName: "code_viewer",
-        title: "Code",
+        title: "<%= Sgtn.t('submissions.Code', 'views') %>",
       },
       {
         type: "column",
@@ -71,13 +71,13 @@
           {
             type: "component",
             componentName: "annotation_pane",
-            title: "Annotations",
+            title: "<%= Sgtn.t('submissions.Annotations', 'views') %>",
             height: 30,
           },
           {
             type: "component",
             componentName: "grades",
-            title: "Grades",
+            title: "<%= Sgtn.t('submissions.Grades', 'views') %>",
           },
         ],
       },

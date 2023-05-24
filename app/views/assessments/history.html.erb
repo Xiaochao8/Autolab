@@ -23,7 +23,7 @@
 
 <% if @cud.instructor? then %>
    <p>
-   <%= link_to "View Gradesheet", viewGradesheet_course_assessment_path(@course, @assessment) %>
+   <%= link_to Sgtn.t('assessments.View.Gradesheet', 'views'), viewGradesheet_course_assessment_path(@course, @assessment) %>
    </p>
 <% end %>
 

@@ -4,18 +4,18 @@
 
 <h2>Missing Submissions for <%= link_to @assessment.display_name, [@course, @assessment] %> </h2>
 
-<%= link_to "Back to Manage Submissions", 
+<%= link_to Sgtn.t('submissions.Back.to.Manage.Submissions', 'views'), 
     course_assessment_submissions_path(@course, @assessment),
-    {:title=>"Return to the previous page"}
+    {:title=>Sgtn.t('submissions.Return.to.the.previous.page', 'views')}
 %> 
 |
-<%= link_to "Manage Extensions",
+<%= link_to Sgtn.t('submissions.Manage.Extensions', 'views'),
     course_assessment_extensions_path(@course, @assessment),
-    {:title=>"Grant extensions to students"} %> 
+    {:title=>Sgtn.t('submissions.Grant.extensions.to.students', 'views')} %> 
 |
-<%= link_to "Fill In Empty Submissions", 
+<%= link_to Sgtn.t('submissions.Fill.In.Empty.Submissions', 'views'), 
     new_course_assessment_submission_path(@course, @assessment, course_user_datum_id: @missing.collect{ |u| u[:id]}.join(',')),
-    {:title=>"Create submissions for all of the missing students"} %>
+    {:title=>Sgtn.t('submissions.Create.submissions.for.all.of.the.missing.students', 'views')} %>
 
 <p>
 <%= @users %>
@@ -34,9 +34,9 @@
       <td><%= student[:email] %></td>
       <td><%= student[:aud].extension ? "yes" : "no" %></td>
       <td><%= end_at_display student[:aud].end_at %></td>
-      <td><%= link_to "Create Submission", 
+      <td><%= link_to Sgtn.t('submissions.Create.Submission', 'views'), 
                new_course_assessment_submission_path(@course, @assessment, course_user_datum_id: student[:id]),
-               {:title=>"Create a submission for this student, with the option to handin a file on their behalf"} %>
+               {:title=>Sgtn.t('submissions.Create.a.submission.for.this.student.with.the.option.to.handin.a.file.on.their.behalf', 'views')} %>
       </td>
     </tr>
   <% end %>

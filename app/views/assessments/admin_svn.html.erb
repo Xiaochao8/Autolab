@@ -24,5 +24,5 @@
 
 <%= form_tag url_for(action: :import_svn), method: :post do %>
   <%= select_tag :importfrom, options_from_collection_for_select(@assessments, :id, :name) %>
-  <%= submit_tag 'Go!' %>
+  <%= submit_tag Sgtn.t('assessments.Go', 'views') %>
 <% end %>

@@ -14,6 +14,6 @@
     <label for="student_autocomplete">Start typing student name or email</label>
   </div>
   <%= hidden_field_tag(:sudo_id) %>
-  <%= submit_tag "Act as user", {:class=> "btn primary"} %>
+  <%= submit_tag Sgtn.t('course_user_data.Act.as.user', 'views'), {:class=> "btn primary"} %>
 <% end %>
 </p>

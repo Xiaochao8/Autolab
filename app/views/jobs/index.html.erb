@@ -5,7 +5,7 @@
 <p>
   This page shows you the status of current and recent autograding jobs.<br />
   <% if @cud.user.administrator? or @cud.instructor? %>
-    <%= link_to "Click here", tango_status_course_jobs_path %> to view the overall status of Tango VMs.
+    <%= link_to Sgtn.t('jobs.Click.here', 'views'), tango_status_course_jobs_path %> to view the overall status of Tango VMs.
   <% end %>
 </p>
 
@@ -103,10 +103,10 @@ end
 
   <p>
   <% if @dead_jobs_view.size <= AUTOCONFIG_DEF_DEAD_JOBS then %>
-    <%= link_to "View long list of recently completed jobs", 
+    <%= link_to Sgtn.t('jobs.View.long.list.of.recently.completed.jobs', 'views'), 
       {:controller=>"jobs", :id=>AUTOCONFIG_MAX_DEAD_JOBS} %>
   <% else %>
-    <%= link_to "View short list of recently completed jobs", 
+    <%= link_to Sgtn.t('jobs.View.short.list.of.recently.completed.jobs', 'views'), 
       {:controller=>"jobs", :id=>nil} %>
   <% end %>
   </p>

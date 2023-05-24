@@ -5,12 +5,12 @@
 
 <%= form_for :scheduler, :url=>{:action=>"create"}, builder: FormBuilderWithDateTimeInput do |f| %>
   <%= f.error_messages %>
-  <%= f.text_field :action, help_text: "  ", placeholder: "(scheduler action)" %>
+  <%= f.text_field :action, help_text: "  ", placeholder: Sgtn.t('schedulers.scheduler.action', 'views') %>
   <%= f.datetime_select :next, step: 1 %>
-  <%= f.text_field :interval , placeholder: "(in seconds)" %>
+  <%= f.text_field :interval , placeholder: Sgtn.t('schedulers.in.seconds', 'views') %>
   <div class="action_buttons">
     <%= f.submit "Create" , {:class=>"btn primary"} %>
   </div>
 <% end %>
 
-<%= link_to 'Back', :action=>"index" %>
+<%= link_to Sgtn.t('schedulers.Back', 'views'), :action=>"index" %>

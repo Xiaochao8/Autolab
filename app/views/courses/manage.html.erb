@@ -32,31 +32,31 @@
         <div class="collapsible-header active"><h5>Admin Course</h5></div>
         <div class="collapsible-body">
           <ul class="options">
-            <li><%= link_to "Course settings", [:edit, @course],
-                { title: "Modify the properties for this course" } %></li>
-            <li><%= link_to "Manage course users", [:users, @course],
-                { title: "Create, modify, and delete user accounts" } %></li>
-            <li><%= link_to "Install assessment", [:install_assessment, @course, :assessments],
-                { title: "Create an assessment from scratch or install one from an existing directory" } %></li>
-            <li><%= link_to "Send bulk email", [:email, @course],
-                { title: "Send an email to everyone in the class" } %></li>
-            <li><%= link_to "Manage course attachments", [@course, :attachments],
-                { title: "Distribute files to your students" } %></li>
-            <li><%= link_to "Manage announcements", [@course, :announcements],
-                { title: "Manage announcements via banners on either front page or all pages (persistent)." } %></li>
+            <li><%= link_to Sgtn.t('courses.Course.settings', 'views'), [:edit, @course],
+                { title: Sgtn.t('courses.Modify.the.properties.for.this.course', 'views') } %></li>
+            <li><%= link_to Sgtn.t('courses.Manage.course.users', 'views'), [:users, @course],
+                { title: Sgtn.t('courses.Create.modify.and.delete.user.accounts', 'views') } %></li>
+            <li><%= link_to Sgtn.t('courses.Install.assessment', 'views'), [:install_assessment, @course, :assessments],
+                { title: Sgtn.t('courses.Create.an.assessment.from.scratch.or.install.one.from.an.existing.directory', 'views') } %></li>
+            <li><%= link_to Sgtn.t('courses.Send.bulk.email', 'views'), [:email, @course],
+                { title: Sgtn.t('courses.Send.an.email.to.everyone.in.the.class', 'views') } %></li>
+            <li><%= link_to Sgtn.t('courses.Manage.course.attachments', 'views'), [@course, :attachments],
+                { title: Sgtn.t('courses.Distribute.files.to.your.students', 'views') } %></li>
+            <li><%= link_to Sgtn.t('courses.Manage.announcements', 'views'), [@course, :announcements],
+                { title: Sgtn.t('courses.Manage.announcements.via.banners.on.either.front.page.or.all.pages.persistent', 'views') } %></li>
 
-            <li><%= link_to "Manage schedulers", [@course, :schedulers],
-                { title: "Set and update scheduler for log submissions. (Advanced feature)"} %></li>
-            <li><%= link_to "Act as user", [:sudo, @course, @cud],
-                { title: "Temporarily become another user" } %></li>
-            <li><%= link_to "Run Moss cheat checker", [:moss, @course],
-                { title: "Use the Stanford Moss server to detect copying" } %></li>
+            <li><%= link_to Sgtn.t('courses.Manage.schedulers', 'views'), [@course, :schedulers],
+                { title: Sgtn.t('courses.Set.and.update.scheduler.for.log.submissions.Advanced.feature', 'views')} %></li>
+            <li><%= link_to Sgtn.t('courses.Act.as.user', 'views'), [:sudo, @course, @cud],
+                { title: Sgtn.t('courses.Temporarily.become.another.user', 'views') } %></li>
+            <li><%= link_to Sgtn.t('courses.Run.Moss.cheat.checker', 'views'), [:moss, @course],
+                { title: Sgtn.t('courses.Use.the.Stanford.Moss.server.to.detect.copying', 'views') } %></li>
 
             <li class="collection-item red-text danger-bottom no-hover"><h4>Danger Zone</h4></li>
-            <li class="danger-side"><%= link_to "Release all grades", [:bulk_release, @course, @cud, :gradebook],
-                { title: "Release all grades for all assessments", data: {confirm: "Are you sure you want to release all grades?", method: "post"}} %></li>
-            <li class="danger-side danger-bottom"><%= link_to "Reload course config file", [:reload, @course],
-                { title: "Reload each time you modify the course.rb file", data: {confirm: "Are you sure you want to reload the course config file?", method: "post"}}%></li>
+            <li class="danger-side"><%= link_to Sgtn.t('courses.Release.all.grades', 'views'), [:bulk_release, @course, @cud, :gradebook],
+                { title: Sgtn.t('courses.Release.all.grades.for.all.assessments', 'views'), data: {confirm: Sgtn.t('courses.Are.you.sure.you.want.to.release.all.grades', 'views'), method: "post"}} %></li>
+            <li class="danger-side danger-bottom"><%= link_to Sgtn.t('courses.Reload.course.config.file', 'views'), [:reload, @course],
+                { title: Sgtn.t('courses.Reload.each.time.you.modify.the.course.rb.file', 'views'), data: {confirm: Sgtn.t('courses.Are.you.sure.you.want.to.reload.the.course.config.file', 'views'), method: "post"}}%></li>
           </ul>
         </div>
       </li>
@@ -67,8 +67,8 @@
         <div class="collapsible-header"><h5>Admin Autolab</h5></div>
         <div class="collapsible-body">
           <ul class="options">
-            <li><%= link_to 'Create new course', new_course_path,
-                          {:title=>"Create a new course"} %></li>
+            <li><%= link_to Sgtn.t('courses.Create.new.course', 'views'), new_course_path,
+                          {:title=>Sgtn.t('courses.Create.a.new.course', 'views')} %></li>
             <li><%= link_to raw('<span class="button">Manage users</span>'),
                           users_path %></li>
           </ul>

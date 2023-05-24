@@ -1,7 +1,7 @@
 <h2>Manage Attachments for <%= link_to @assessment.display_name, current_assessment_path %> </h2>
 
 <p>
-<%= link_to 'Add Attachment', {:controller=>"attachments",:action=>"create",:type=>"AssessmentAttachment",:fk=>@assessment.id} %>
+<%= link_to Sgtn.t('assessments.Add.Attachment', 'views'), {:controller=>"attachments",:action=>"create",:type=>"AssessmentAttachment",:fk=>@assessment.id} %>
 </p>  
 
 <table class="prettyBorder" >
@@ -18,9 +18,9 @@
     <td><%=h a.filename %></td>
     <td><%=h a.mime_type %></td>
     <td><%=h a.released? %></td>
-    <td>(<%= link_to 'Edit',
+    <td>(<%= link_to Sgtn.t('assessments.Edit', 'views'),
       {:controller=>"attachments",:action=>"edit",:id=>a.id} %>)
-      (<%= link_to 'Delete',
+      (<%= link_to Sgtn.t('assessments.Delete', 'views'),
       {:controller=>"attachments",:action=>"destroy",:id=>a.id} %>)
     </td>
   </tr>

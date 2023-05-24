@@ -121,10 +121,10 @@
 <br>
   <% if @cud.instructor? then %>
       <% if @assessment.has_autograder? and submission.version > 0 then %>
-        <%= link_to 'Regrade', [:regrade, @course, @assessment, submission_id: submission], {method: :post, class:"btn small"} %>
+        <%= link_to Sgtn.t('assessments.Regrade.1', 'views'), [:regrade, @course, @assessment, submission_id: submission], {method: :post, class:"btn small"} %>
       <% end %>
-      <%= link_to 'Destroy', [:destroyConfirm, @course, @assessment, submission], {:class=>"btn small"} %>
-      <%= link_to 'Edit', [:edit, @course, @assessment, submission], {:class=>"btn small"} %>
+      <%= link_to Sgtn.t('assessments.Destroy.1', 'views'), [:destroyConfirm, @course, @assessment, submission], {:class=>"btn small"} %>
+      <%= link_to Sgtn.t('assessments.Edit', 'views'), [:edit, @course, @assessment, submission], {:class=>"btn small"} %>
   <% end %>
 
     <% if @cud.instructor? %>

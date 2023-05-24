@@ -25,8 +25,8 @@
 			<%= render :partial=>"courseFields", :locals=>{:f=>f, :course=>@course} %>
 			<%= f.submit 'Save', { :class=> "btn primary" } %>
 			<% if current_user.administrator? %>
-				<%= link_to "Delete Course", course_path(@course), method: :delete,
-										data: {confirm: "Are you sure to destroy #{@course.full_name}?"}, class: "btn" %>
+				<%= link_to Sgtn.t('courses.Delete.Course', 'views'), course_path(@course), method: :delete,
+										data: {confirm: Sgtn.t('courses.Are.you.sure.to.destroy.course_full_name', 'views', course_full_name: @course.full_name)}, class: "btn" %>
 			<% end %>
 		<% end %>
 	</div>

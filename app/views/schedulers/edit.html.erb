@@ -6,13 +6,13 @@
 
 <%= form_for @scheduler, :url=>{:action=>"update"}, :method=>"patch", builder: FormBuilderWithDateTimeInput do |f| %>
   <%= f.error_messages %>
-  <%= f.text_field :action, help_text: "  ", placeholder: "(scheduler action)" %>
+  <%= f.text_field :action, help_text: "  ", placeholder: Sgtn.t('schedulers.scheduler.action', 'views') %>
   <%= f.datetime_select :next, step: 1 %>
-  <%= f.text_field :interval , placeholder: "(in seconds)" %>
+  <%= f.text_field :interval , placeholder: Sgtn.t('schedulers.in.seconds', 'views') %>
   <div class="action_buttons">
     <%= f.submit "Update" , {:class=>"btn primary"} %>
   </div>
 <% end %>
 
-<%= link_to 'Show', {:action=>"show",:id=>@scheduler.id} %> |
-<%= link_to 'Index', {:action=>"index"} %>
+<%= link_to Sgtn.t('schedulers.Show', 'views'), {:action=>"show",:id=>@scheduler.id} %> |
+<%= link_to Sgtn.t('schedulers.Index', 'views'), {:action=>"index"} %>

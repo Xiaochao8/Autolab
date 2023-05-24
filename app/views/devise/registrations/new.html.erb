@@ -54,7 +54,7 @@
   </div>
 
   <div class="input-field">
-    <%= f.password_field :password_confirmation, :title => "Must match your password", :required => true %>
+    <%= f.password_field :password_confirmation, :title => Sgtn.t('devise.registrations.Must.match.your.password', 'views'), :required => true %>
     <%= f.label :password_confirmation %>
     <div class="help-block">
       <% if resource.errors[:password_confirmation].empty? %>

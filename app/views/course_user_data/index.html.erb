@@ -12,5 +12,5 @@
 <tr><td class="noStyle">Recitation</td><td class="noStyle"><%= @user.section %></td></tr>
 <tr><td class="noStyle">Course</td><td class="noStyle"><%= @user.course.display_name %></td></tr>
 </table>
-<%= link_to 'Edit this information' , :action=>"edit", :id=>@user.id %>
+<%= link_to Sgtn.t('course_user_data.Edit.this.information', 'views') , :action=>"edit", :id=>@user.id %>
 

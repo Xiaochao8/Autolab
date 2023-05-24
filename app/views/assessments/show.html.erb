@@ -51,36 +51,36 @@
           <div class="collapsible-header"><h5>Admin Options</h5></div>
           <div class="collapsible-body">
             <ul class="options">
-              <li><%= link_to "Edit assessment", {:action => "edit" }, {:title=> "View and modify the properties for this assessment, including its problems", :class=>""} %></li>
-              <li><%= link_to "Grade submissions", {:action => "viewGradesheet" }, {:title=> "View and enter grades on the gradesheet" } %></li>
-              <li><%= link_to "Export assessment", {:action => "export" }, {:title=> "Export persistent properties that will be imported when you install this assessment in a future term" } %></li>
+              <li><%= link_to "Edit assessment", {:action => "edit" }, {:title=> Sgtn.t('assessments.View.and.modify.the.properties.for.this.assessment.including.its.problems', 'views'), :class=>""} %></li>
+              <li><%= link_to "Grade submissions", {:action => "viewGradesheet" }, {:title=> Sgtn.t('assessments.View.and.enter.grades.on.the.gradesheet', 'views') } %></li>
+              <li><%= link_to "Export assessment", {:action => "export" }, {:title=> Sgtn.t('assessments.Export.persistent.properties.that.will.be.imported.when.you.install.this.assessment.in.a.future.term', 'views') } %></li>
 
               <% if @assessment.has_autograder? then %>
-                <li><%= link_to "Autograder settings", [:edit, @course, @assessment, :autograder], title: "Modify autograding properties such as the VM image and the timeout value" %></li>
+                <li><%= link_to "Autograder settings", [:edit, @course, @assessment, :autograder], title: Sgtn.t('assessments.Modify.autograding.properties.such.as.the.VM.image.and.the.timeout.value', 'views') %></li>
               <% end %>
 
               <% if @assessment.has_groups? %>
-                <li><%= link_to "Group settings", [@course, @assessment, :groups], title: "Manage group settings" %></li>
+                <li><%= link_to "Group settings", [@course, @assessment, :groups], title: Sgtn.t('assessments.Manage.group.settings', 'views') %></li>
               <% end %>
 
               <% if @assessment.has_scoreboard? %>
-                <li><%= link_to "Scoreboard settings", [:edit, @course, @assessment, :scoreboard], title: "Configure the appearance of the scoreboard" %></li>
+                <li><%= link_to "Scoreboard settings", [:edit, @course, @assessment, :scoreboard], title: Sgtn.t('assessments.Configure.the.appearance.of.the.scoreboard', 'views') %></li>
               <% end %>
-              <li><%= link_to "Manage extensions", [@course, @assessment, :extensions], { title: "Give extensions to students" } %></li>
-              <li><%= link_to "Manage submissions", [@course, @assessment, :submissions], { title: "Create, view, export, and re-autograde submissions" } %></li>
-              <li><%= link_to "View statistics", {:action => "statistics" }, {:title=> "View detailed stats for this assessment" } %></li>
-              <li><%= link_to "Bulk import grades", {:action => "bulkGrade" }, {:title=> "Upload scores or feedback for multiple students from a CSV file" } %></li>
-              <li><%= link_to "Bulk export grades", {:action => "bulkExport" }, {:title=> "Export grades (with sub-scores) \nfor all students to a CSV file" } %></li>
+              <li><%= link_to "Manage extensions", [@course, @assessment, :extensions], { title: Sgtn.t('assessments.Give.extensions.to.students', 'views') } %></li>
+              <li><%= link_to "Manage submissions", [@course, @assessment, :submissions], { title: Sgtn.t('assessments.Create.view.export.and.re.autograde.submissions', 'views') } %></li>
+              <li><%= link_to "View statistics", {:action => "statistics" }, {:title=> Sgtn.t('assessments.View.detailed.stats.for.this.assessment', 'views') } %></li>
+              <li><%= link_to "Bulk import grades", {:action => "bulkGrade" }, {:title=> Sgtn.t('assessments.Upload.scores.or.feedback.for.multiple.students.from.a.CSV.file', 'views') } %></li>
+              <li><%= link_to "Bulk export grades", {:action => "bulkExport" }, {:title=> Sgtn.t('assessments.Export.grades.with.sub.scores.nfor.all.students.to.a.CSV.file', 'views') } %></li>
 
               <li class="collection-item red-text danger-bottom no-hover"><h4>Danger Zone</h4></li>
 
               <li class="danger-side">
-                <%= link_to "Release all grades", { :action => "releaseAllGrades" }, { :title=> "Make all scores for this assessment visible to students", data: {confirm: "Are you sure you want to release all grades?", method: "post"}} %>
+                <%= link_to "Release all grades", { :action => "releaseAllGrades" }, { :title=> Sgtn.t('assessments.Make.all.scores.for.this.assessment.visible.to.students', 'views'), data: {confirm: Sgtn.t('assessments.Are.you.sure.you.want.to.release.all.grades', 'views'), method: "post"}} %>
               </li>
               <li class="danger-side">
-                <%= link_to "Withdraw all grades", { :action => "withdrawAllGrades" }, {:title=> "Hide all scores for this assessment from students", data: {confirm: "Are you sure you want to withdraw all grades?", method: "post"}} %>
+                <%= link_to "Withdraw all grades", { :action => "withdrawAllGrades" }, {:title=> Sgtn.t('assessments.Hide.all.scores.for.this.assessment.from.students', 'views'), data: {confirm: Sgtn.t('assessments.Are.you.sure.you.want.to.withdraw.all.grades', 'views'), method: "post"}} %>
               </li>
-              <li class="danger-side danger-bottom"> <%= link_to "Reload config file", {:action => "reload" }, {:title=> "Reload the assessment config file (provided for backward compatibility with legacy assessments)", data: {confirm: "Are you sure you want to reload the config file?", method: "post"}} %></li>
+              <li class="danger-side danger-bottom"> <%= link_to "Reload config file", {:action => "reload" }, {:title=> Sgtn.t('assessments.Reload.the.assessment.config.file.provided.for.backward.compatibility.with.legacy.assessments', 'views'), data: {confirm: Sgtn.t('assessments.Are.you.sure.you.want.to.reload.the.config.file', 'views'), method: "post"}} %></li>
             </ul>
           </div>
         </li>
@@ -95,17 +95,17 @@
           <div class="collapsible-body">
             <ul class="options">
               <li><%= link_to "Grade section #{@cud.section} submissions", url_for(:action => 'viewGradesheet', :section => '1', :escape => false),
-                :title=> "View and enter grades for your section. Make sure your instructor has assigned you to a section in your Autolab account" %></li>
+                :title=> Sgtn.t('assessments.View.and.enter.grades.for.your.section.Make.sure.your.instructor.has.assigned.you.to.a.section', 'views') %></li>
               <li><%= link_to "Grade all submissions", url_for(:action => 'viewGradesheet'),
-                :title=> "View and enter grades for all sections"  %></li>
+                :title=> Sgtn.t('assessments.View.and.enter.grades.for.all.sections', 'views')  %></li>
 
               <% if !@assessment.disable_handins %>
-                <li><%= link_to  "Download section #{@cud.section} submissions", [:downloadAll, @course, @assessment, :submissions, final: true], title: "Download section #{@cud.section} submissions" %></li>
+                <li><%= link_to  "Download section #{@cud.section} submissions", [:downloadAll, @course, @assessment, :submissions, final: true], title: Sgtn.t('assessments.Download.section.cud_section.submissions', 'views', cud_section: @cud.section) %></li>
               <% end %>
               <li class="collection-item red-text danger-bottom no-hover"><h4>Danger Zone</h4></li>
-              <li class="danger-side"><%= link_to "Reload config file", {:action => "reload" }, {:title=> "Reload the assessment config file (provided for backward compatibility with legacy assessments)", data: {confirm: "Are you sure you want to reload the config file?", method: "post"}} %></li>
+              <li class="danger-side"><%= link_to "Reload config file", {:action => "reload" }, {:title=> Sgtn.t('assessments.Reload.the.assessment.config.file.provided.for.backward.compatibility.with.legacy.assessments', 'views'), data: {confirm: Sgtn.t('assessments.Are.you.sure.you.want.to.reload.the.config.file', 'views'), method: "post"}} %></li>
               <li class="danger-side danger-bottom">
-                <%= link_to "Release section grades", { :action => "releaseSectionGrades" }, { :title=> "Make all scores visible to the students in your section. This will work only if your instructor has assigned you to a lecture and section in your Autolab account.", data: {confirm: "Are you sure you want to release section grades?", method: "post"}} %>
+                <%= link_to "Release section grades", { :action => "releaseSectionGrades" }, { :title=> Sgtn.t('assessments.Make.all.scores.visible.to.the.students.in.your.section.This.will.work.only.if.your.instructor.has', 'views'), data: {confirm: Sgtn.t('assessments.Are.you.sure.you.want.to.release.section.grades', 'views'), method: "post"}} %>
               </li>
             </ul>
           </div>
@@ -122,22 +122,22 @@
         <div class="collapsible-header active"><h5>Options</h5></div>
         <div class="collapsible-body">
           <ul class="options">
-            <li><%= link_to "View handin history", {:action => 'history'}, {:title=> "View your submissions, scores, and feedback from the course staff" } %> </li>
+            <li><%= link_to "View handin history", {:action => 'history'}, {:title=> Sgtn.t('assessments.View.your.submissions.scores.and.feedback.from.the.course.staff', 'views') } %> </li>
 
             <% if @assessment.has_writeup? %>
-              <li><%= link_to "View writeup", {:action => 'writeup'}, {:title=> "View the assessment writeup", :class=>""}%> </li>
+              <li><%= link_to "View writeup", {:action => 'writeup'}, {:title=> Sgtn.t('assessments.View.the.assessment.writeup', 'views'), :class=>""}%> </li>
             <% end %>
 
-            <li><%= link_to "Download handout", {:action => 'handout'}, {:title=> "Download handout materials and starter code" } %> </li>
+            <li><%= link_to "Download handout", {:action => 'handout'}, {:title=> Sgtn.t('assessments.Download.handout.materials.and.starter.code', 'views') } %> </li>
             <% if @assessment.has_groups? %>
               <% if @aud.membership_status != AssessmentUserDatum::UNCONFIRMED then %>
-                <li><%= link_to "Group options", [@course, @assessment, @aud.group], title: "Check your group settings." %></li>
+                <li><%= link_to "Group options", [@course, @assessment, @aud.group], title: Sgtn.t('assessments.Check.your.group.settings', 'views') %></li>
               <% else %>
-                <li><%= link_to "Group options", [:new, @course, @assessment, :group], title: "Check your group settings." %></li>
+                <li><%= link_to "Group options", [:new, @course, @assessment, :group], title: Sgtn.t('assessments.Check.your.group.settings', 'views') %></li>
               <% end %>
             <% end %>
             <% if @assessment.has_scoreboard? %>
-              <li><%= link_to "View scoreboard", [@course, @assessment, :scoreboard], title: "View the assessment scoreboard" %></li>
+              <li><%= link_to "View scoreboard", [@course, @assessment, :scoreboard], title: Sgtn.t('assessments.View.the.assessment.scoreboard', 'views') %></li>
             <% end %>
 
           <% @list.sort { |a,b| a[1] <=> b[1] }.each { |key, value| %>

@@ -9,7 +9,7 @@
     <% @grouplessCUDs.each do |cud| %>
       <% if cud.id != @cud.id && cud.student? then %>
         <li><b><%= cud.email %></b>
-          (<%= link_to "Invite to Group", [@course, @assessment, @group, member_id: cud.id], method: :post %>)
+          (<%= link_to Sgtn.t('groups.Invite.to.Group', 'views'), [@course, @assessment, @group, member_id: cud.id], method: :post %>)
         </li>
       <% end %>
     <% end %>

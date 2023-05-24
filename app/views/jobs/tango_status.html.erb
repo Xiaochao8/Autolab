@@ -132,7 +132,7 @@
       end
     }
     %>
-  <%= button_tag "All VM Pools", name: "vmpool", value: "", class: 'btn btn-info small' %>
+  <%= button_tag Sgtn.t('jobs.All.VM.Pools', 'views'), name: "vmpool", value: "", class: 'btn btn-info small' %>
   <% pool_list.each { |p| %>
     <%= button_tag(p, name: "vmpool", value: p, class: 'btn btn-info small') %>
   <% } %>

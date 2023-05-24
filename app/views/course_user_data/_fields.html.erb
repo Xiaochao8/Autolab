@@ -1,13 +1,13 @@
 <%= f.fields_for :user, cud.user do |u| %>
     <%# It doesn't make sense for these fields to be editable when editing an existing CUD %>
-    <%= u.email_field :email, disabled: edit, placeholder: "johndoe@example.com" %>
+    <%= u.email_field :email, disabled: edit, placeholder: Sgtn.t('course_user_data.johndoe.example.com', 'views') %>
 
-    <%= u.text_field :first_name, disabled: edit, placeholder: "John" %>
-    <%= u.text_field :last_name, disabled: edit, placeholder: "Doe" %>
+    <%= u.text_field :first_name, disabled: edit, placeholder: Sgtn.t('course_user_data.John', 'views') %>
+    <%= u.text_field :last_name, disabled: edit, placeholder: Sgtn.t('course_user_data.Doe', 'views') %>
 
   <% end %>
 
-  <%= f.text_field :nickname, help_text: "Anonymous nickname to display on the public scoreboards", placeholder: "droh" %>
+  <%= f.text_field :nickname, help_text: "Anonymous nickname to display on the public scoreboards", placeholder: Sgtn.t('course_user_data.droh', 'views') %>
 
   <%= f.text_field :course_number, help_text: "The course number", placeholder: "15213", disabled: !@cud.instructor? %>
 

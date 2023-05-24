@@ -1,5 +1,5 @@
 <% if current_user.administrator? || current_user.instructor? %>
-<%= link_to "Create user", new_user_path, { :class=>"btn" }%>
+<%= link_to Sgtn.t('users.Create.user', 'views'), new_user_path, { :class=>"btn" }%>
 <% end %>
 
 <% if @users.count >= 1 %>
